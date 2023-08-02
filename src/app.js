@@ -12,8 +12,15 @@ app.use(morgan("dev"));
 app.use(express.static("./public"));
 
 // Database stuff
+
+
+
 db.test();
-// db.sync();
+//______________Dangerous______________\\
+
+//              db.sync();
+
+//.....................................\\
 
 app.get("/home", (req, res, next) => {
     res.status(200).send("Ok");
