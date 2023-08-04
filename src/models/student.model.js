@@ -31,6 +31,9 @@ const Student = sequelize.define("student", {
         type: DataTypes.STRING,
         max: 40
     },
+    bio: {
+        type: DataTypes.STRING
+    },
     profileImage: {
         type: DataTypes.STRING
     },
@@ -44,7 +47,15 @@ const Student = sequelize.define("student", {
     online: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
-    }
+    },
+    accessToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    refreshToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
 });
 
 

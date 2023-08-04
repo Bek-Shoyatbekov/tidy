@@ -27,15 +27,18 @@ const Teacher = sequelize.define("teacher", {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    level: {
-        type: DataTypes.STRING,
-        max: 40
+    bio: {
+        type: DataTypes.STRING
     },
     profileImage: {
         type: DataTypes.STRING
     },
     email: {
         type: DataTypes.STRING
+    },
+    experience: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
     },
     isAdmin: {
         type: DataTypes.BOOLEAN,
@@ -49,7 +52,15 @@ const Teacher = sequelize.define("teacher", {
     online: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
-    }
+    },
+    accessToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    refreshToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
 });
 
 

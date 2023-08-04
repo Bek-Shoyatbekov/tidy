@@ -41,6 +41,8 @@ Deparment.belongsTo(Admin);
 Deparment.hasMany(Teacher);
 Teacher.belongsTo(Deparment);
 
+
+
 const db = {
     sync: (isForce) => {
         sequelize.sync({ force: isForce })
