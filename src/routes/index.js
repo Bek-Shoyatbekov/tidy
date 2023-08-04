@@ -1,10 +1,15 @@
 import { Router } from "express";
-import { AdminController } from "../controllers/admin";
+
+import { AuthController } from "../controllers/auth.controller";
 
 const router = Router();
 
 
-router.route("/news",)
+// Auth routes
+
+router.post("/auth/signup", AuthController.signUp);
+
+// router.post("/auth/signin",AuthController)
 
 
 

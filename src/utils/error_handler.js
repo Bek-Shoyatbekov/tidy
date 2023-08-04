@@ -1,12 +1,11 @@
-import { ENV } from "../configs/Envs";
+import { ENV } from "../configs/Envs.js";
 
-import { Request, Response } from "express";
 
 /**
  * 
  * @param {Error} err 
- * @param {Request} req 
- * @param {Response} res 
+ * @param {} req 
+ * @param {} res 
  * @returns Error if only in development process else 
  */
 

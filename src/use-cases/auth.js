@@ -1,7 +1,7 @@
 
-import Admin from "../models/admin.model";
-import Student from "../models/student.model";
-import Teacher from "../models/teacher.model";
+import Admin from "../models/admin.model.js";
+import Student from "../models/student.model.js";
+import Teacher from "../models/teacher.model.js";
 
 /**
  * @constant {object} dataParam
