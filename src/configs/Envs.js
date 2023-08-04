@@ -2,6 +2,8 @@ import "dotenv/config";
 
 const PORT = process.env.PORT;
 
+const ENV = process.env.ENV;
+
 const DB_CONFIG = {
     PORT: process.env.DATABASE_PORT,
     USER: process.env.DATABASE_USER,
@@ -12,5 +14,6 @@ const DB_CONFIG = {
 
 export {
     PORT,
-    DB_CONFIG
+    DB_CONFIG,
+    ENV
 }

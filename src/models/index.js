@@ -1,4 +1,6 @@
 import { sequelize, testDbConnection } from "../utils/connectDb.js";
+import Admin from "./admin.model.js";
+import Deparment from "./department.model.js";
 
 // Relations
 
@@ -32,6 +34,12 @@ Register.belongsTo(Student);
 
 Lesson.hasMany(Register);
 Register.belongsTo(Lesson);
+
+Admin.hasMany(Deparment);
+Deparment.belongsTo(Admin);
+
+Deparment.hasMany(Teacher);
+Teacher.belongsTo(Deparment);
 
 const db = {
     sync: (isForce) => {

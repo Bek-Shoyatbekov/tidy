@@ -41,6 +41,14 @@ const Teacher = sequelize.define("teacher", {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
+    },
+    status: {
+        type: DataTypes.ENUM("active", "inactive", "banned"),
+        defaultValue: "inactive"
+    },
+    online: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     }
 });
 

@@ -3,7 +3,7 @@ import { sequelize } from "../utils/connectDb.js";
 import { uuid } from "uuidv4";
 
 
-const Student = sequelize.define("student", {
+const Admin = sequelize.define("admin", {
     id: {
         type: DataTypes.UUID,
         allowNull: false,
@@ -27,15 +27,24 @@ const Student = sequelize.define("student", {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    level: {
-        type: DataTypes.STRING,
-        max: 40
-    },
     profileImage: {
         type: DataTypes.STRING
     },
     email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    isVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    accessToken: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    refreshToken: {
+        type: DataTypes.STRING,
+        allowNull: true
     },
     status: {
         type: DataTypes.ENUM("active", "inactive", "banned"),
@@ -49,4 +58,4 @@ const Student = sequelize.define("student", {
 
 
 
-export default Student;
+export default Admin;
